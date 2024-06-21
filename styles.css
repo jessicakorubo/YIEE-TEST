@@ -303,6 +303,7 @@ nav#navbar .tertiary-nav #sign-up {
 }
 .hero {
     width: 20rem;
+    margin-top: 5rem;
 }
 .hero a {
     text-decoration: none;
@@ -318,6 +319,7 @@ nav#navbar .tertiary-nav #sign-up {
     line-height: 26px;
     margin-top: 2rem;
 }
+
 .map {
     margin: auto;
     width: 70%;
@@ -1001,6 +1003,9 @@ img#closePopup {
     .mapText p {
         color: #000;
     }
+    .career p {
+        width: 100%;
+    }
     .arr_hide {
         display: block;
         font-size: 18px;
@@ -1018,7 +1023,7 @@ img#closePopup {
     nav#navbar {
         margin-bottom: 0;
         justify-content: center;
-        gap: 25%;
+        gap: 30%;
     }
     .container{
         padding: 0 0;
@@ -1031,6 +1036,7 @@ img#closePopup {
         /* visibility: hidden; */
         padding: 2rem 0;
         position: absolute;
+        z-index: 7;
         top: 50px;
         width:90%;
         margin: auto;
@@ -1195,5 +1201,11 @@ img#closePopup {
     }
     .menu {
         overflow: scroll;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    nav#navbar {
+        gap: 25%;
     }
 }
