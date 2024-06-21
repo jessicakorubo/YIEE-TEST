@@ -23,20 +23,28 @@ body {
     background-repeat: no-repeat no-repeat;
     background-position: 0% 41%, 100% 18%;
 }
-
+.container {
+    padding: 0 2rem;
+}
 h2 {
     margin: 0;
 }
 .semi {
-    margin-top: 7rem;
+    margin-top: 5rem;
     width: 100%;
     background-position: center;
-    height: 38rem;
+    height: 36rem;
     background-repeat: no-repeat;
     background-image: url(images/semicircle.png);
 }
-.choose {
+.mobile_nav {
+    display: none;
+    opacity: 0;
+    transition: 1.5s;
+}
 
+.choose {
+  
     margin: auto;
     text-align: center;
     width: min-content;
@@ -49,6 +57,7 @@ h2 {
 .brandlogo {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 img.brandPics{
     height: 1.5rem;
@@ -65,6 +74,7 @@ img.brandPics{
 .choose p {
     font-family: 'Inter';
     font-size: 18px;
+    /* width: 500px; */
 }
 .rating {
     font-family: 'Inter';
@@ -84,8 +94,15 @@ img.avatar {
     height: 40px;
 }
 .email {
-    /* display: flex;
-    justify-content: center; */
+    width: 500px;
+    display: flex;
+    padding-left: 0.6rem;
+    padding-right: 0.3rem;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    border-radius: 12px;
+    background: #fff;
     margin-top: 3rem;
 }
 .truefi {
@@ -108,25 +125,29 @@ img.avatar {
 }
 .choose .email input[type='email']  {
     position: relative;
-    width:500px;
+    /* width:100%; */
+    background: transparent;
     padding: 0.5rem;
     color: #0000005E;
     height: 45px;
     font-size: 18px;
+    border:none;
     font-family: 'Inter';
-    border-radius: 12px;
+    outline: none;
 }
 .choose .email button[type='submit'] {
-    position: relative;
-    right: 9.1rem;
-    height: 50px;
-    width: 133px;
-    /* top: 0.1rem; */
+    /* height: 50px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
     color: white;
+    padding: 0.5rem 0.6rem;
     background-color: #257CFF;
     font-family: 'Inter';
     font-size: 18px;
-    border-color: transparent ;
+    border:none ;
     border-radius: 10px;
 }
 .av1 {
@@ -156,11 +177,15 @@ img.avatar {
 nav#navbar {
     margin-top: 2rem;
     display: flex;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: space-between;
+    position: relative;
+    /* padding:  0 2rem; */
+    align-items: center;
     margin-bottom: 4rem;
 }
-
+.hamburger {
+    display: none;
+}
 nav#navbar .primary-nav #logo {
     display: flex;
     /* justify-content: space-between; */
@@ -179,7 +204,7 @@ nav#navbar .primary-nav #logo {
     color: #000000;
 }
 
-nav#navbar .secondary-nav {
+ .secondary-nav {
     display: flex;
     justify-content: space-between;
     width: 22vw;
@@ -193,48 +218,75 @@ nav#navbar .secondary-nav .content {
     font-size: 18px; */
 }
 
-nav#navbar .tertiary-nav {
+.tertiary-nav {
     display: flex;
     justify-content: space-between;
+    gap: 2rem;
     align-items: center;
-    width: 22vw;
+    cursor: pointer;
 }
-
+.demo_mobile {
+    display: flex;
+    align-items: center;
+}
+.demo_mobile .img {
+    margin-right: 12px;
+}
+.demo_mobile img {
+    padding: 0.6rem;
+    border-radius: 100%;
+    border: 1px solid #62A6FD;
+}
 nav#navbar .tertiary-nav #demo {
     height: 75%;
-    width: 14vw;
+    padding: 0.5rem 1rem;
     background-color: #C2DBFF;
     border-radius: 8px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
 #demo .img {
     opacity: 0.4;
+   margin-right: 9px;
+}
+
+#demo .img img {
+    padding: 0.6rem;
     border: 1px solid #257CFF;
-    border-radius: 100%;
-    padding: 0 4px;
+    border-radius:100%;
 }
 
 #demo .text {
-    margin: 0 0 0 -25px;
     font-size: 18px;
     line-height: 26px;
     color: #257CFF;
+    /* padding: 1rem; */
+    border-radius: 100%;
+    text-decoration: none;
 }
+
 
 nav#navbar .tertiary-nav #sign-up {
     height: 75%;
+    cursor: pointer;
     width: 7vw;
     background-color: #257CFF;
-    color: #FFF;
+    padding: 1rem 1.5rem;
     font-family: 'inter';
     border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+#sign-up a {
+    color: white;
+    text-decoration: none;
+}
+
+
 
 /* MAP */
 
@@ -266,7 +318,6 @@ nav#navbar .tertiary-nav #sign-up {
     width: 70%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1;
     margin-bottom: 2rem;
 }
 .mapText p {
@@ -648,28 +699,28 @@ img.personImage {
     font-size: 18px;
     font-family: 'DM Sans';
 }
-.journey a:hover{
-    font-size: 20px;
-    transition: font-size 1s;
-}
+
 /* Testimonials */
 .testimonial {
     margin-top: 10rem;
     font-family: 'Inter';
 }
-.testimonialTitle h1, .testimonialTitle p {
+.testimonialTitle h1 {
     display: flex;
     width: 100%;
     justify-content: center;
-}
-.testimonialTitle h1 {
     font-weight: 700;
     font-size: 64px;
     margin-bottom: 1rem;
 }
 .testimonialTitle p {
+    display: flex;
+    width: 100%;
+    justify-content: center;
     line-height: 29px;
     font-size: 18px;
+    padding: 0.5rem 2.2rem;
+    text-align: center;
 }
 .groupedTestimonial {
     width: 90%;
@@ -836,4 +887,243 @@ p#review {
 }
 .socials img {
     margin-right: 0.5rem;
+}
+
+#signInPopup {
+    position: fixed;
+    z-index: 2;
+    font-family: 'Inter';
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    background-color: white;
+    color: black;
+    height: 60vh;
+    padding: 2rem;
+    visibility: hidden;
+    transition: 0.5s;
+    opacity: 0;
+    box-shadow: 3px 4px 50px rgba(4, 3, 2, 1);
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+#signInPopup.active {
+    visibility: visible;
+    transition: 0.5s;
+    opacity: 1;
+}
+#signInPopup #signTitle {
+    margin: 2rem 0;
+}
+.signLogo {
+    margin: 10px 0;
+}
+
+.form {
+    width: 90%;
+    margin: auto;
+    align-items: center;
+}
+form {
+    width: 100%;
+}
+form .signInInput {
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid black;
+}
+.signInInput input {
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+/* BLUR BODY */
+#blur.active {
+    filter: blur(10px);
+    pointer-events: none;
+    user-select: none
+    ;
+}
+.submitForm input {
+    background-color: #257CFF;
+    color:white;
+    /* font-family: 'Inter'; */
+    padding: 0.7rem 1.2rem;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+}
+img#closePopup {
+    float: right;
+    cursor: pointer;
+}
+.submitForm input:hover {
+    color:rgb(222, 227, 231);
+}
+.arr_hide {
+    display: none;
+
+}
+/* MOBILE DEVICES  */
+@media screen  and (max-width: 950px){
+    .map{
+        width: 85%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .map h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .mapText {
+        margin-top: 3rem;
+    }
+    .mapText p {
+        color: #000;
+    }
+    .arr_hide {
+        display: block;
+        font-size: 18px;
+    }
+    .brands {
+        margin-top: 0;
+    }
+    .brandlogo {
+        gap: 2rem;
+        padding: 0.5rem 1.2rem;
+    }
+    .get_hide {
+        display: none;
+    }
+    nav#navbar {
+        padding:  0 25px;
+        margin-bottom: 0;
+    }
+    .container{
+        padding: 0 0;
+    }
+    #signInPopup {
+        width: 70%;
+        height: 70vh;
+    }
+    .mobile_nav {
+        /* visibility: hidden; */
+        padding: 2rem 0;
+        position: absolute;
+        top: 50px;
+        width:100%;
+        background-color: white;
+        box-shadow: 2px 5px 40px rgba(21, 20, 57, 0.4);
+        color: white;
+        border-radius: 20px;
+    }
+    .mobile_nav.active {
+        display: block;
+        opacity: 1;
+        transition: 1.5s;
+    }
+    .mobile_nav li {
+        list-style: none;
+        font-family: 'Inter';
+        margin:0 2rem;
+        /* width: 100%; */
+        border-bottom: 1px solid #257CFF;
+        padding-bottom: 0.6rem;
+        margin-bottom: 1.5rem;
+    }
+    .mobile_nav li a {
+        text-decoration: none;
+        color: black;
+    }
+    .hamburger {
+        display: block;
+    }
+    .secondary-nav {
+        display: none;
+    }
+    .tertiary-nav {
+        display: none;
+    }
+    .sign_mobile {
+        background-color: #257CFF;
+        color: white;
+        border-radius: 20px;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        text-align: center;
+    }
+    .mobile_nav .sign_mobile a {
+        color: white;
+    }
+    .email {
+        width: fit-content;
+        margin-top: 1rem;
+        box-shadow: 5px 3px 50px rgba(4, 3, 2, 1);
+    }
+    .semi {
+        margin-top: 0;
+        background-image: url(images/semicircle_mobile.png);
+    }
+    .choose h1 {
+        font-size: 40px;
+        width: auto;
+        line-height: 50px;
+    }
+    .choose p {
+        font-size: 13px;
+        padding: 10px;
+    }
+    .choose .email button[type='submit'] {
+        font-size: 13px;
+    }
+    .heroContainer {
+        flex-direction: column;
+        padding: 0.5rem 1.2rem;
+    }
+    .hero {
+        width: fit-content;
+    }
+    .services {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .iconsFlex {
+        display: none;
+    }
+    .serviceflex {
+        width: 100%;
+    }
+    .abouthero {
+        flex-direction: column;
+        align-items: center;
+    }
+    .aboutHeroText {
+        width: 100%;
+    }
+    .imageCircle{
+        left: 4rem;
+    }
+   
+    .imageLeft {
+        width: auto;
+    }
+    .numbers {
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+    .hitNumbers {
+        flex-direction: column;
+    }
+    .numbers .num {
+        width: fit-content;
+    }
+    .testimonialTitle p {
+        width: fit-content;
+    }
+    .journey {
+        padding: 4rem;
+    }
 }
