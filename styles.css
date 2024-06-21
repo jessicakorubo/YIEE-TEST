@@ -1120,10 +1120,16 @@ img#closePopup {
     .numbers .num {
         width: fit-content;
     }
+    .testimonialTitle h1 {
+        font-size: 35px;
+    }
     .testimonialTitle p {
         width: fit-content;
     }
     .journey {
         padding: 4rem;
+    }
+    .journey h1 {
+        font-size: 45px;
     }
 }
