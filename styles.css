@@ -19,6 +19,7 @@
 body {
     z-index: 1;
     overflow-x: hidden;
+    width: 100vw;
     background-image: url(images/BGRIGHT.png), url(images/BGLEFT.png);
     background-repeat: no-repeat no-repeat;
     background-position: 0% 41%, 100% 18%;
@@ -1017,7 +1018,7 @@ img#closePopup {
     nav#navbar {
         margin-bottom: 0;
         justify-content: center;
-        gap: 30%;
+        gap: 25%;
     }
     .container{
         padding: 0 0;
@@ -1144,7 +1145,7 @@ img#closePopup {
         width: fit-content;
     }
     .journey {
-        padding: 4rem;
+        padding: 3rem;
     }
     .journey h1 {
         font-size: 35px;
@@ -1159,11 +1160,40 @@ img#closePopup {
     }
     .getStarted {
         flex-direction: column;
-        padding:  4rem 2rem;
+        padding:  4rem 1rem;
+        overflow: hidden;
+    }
+    .getStarted h1 {
+        font-size:30px;
+        line-height: 32px;
     }
     .footer {
         flex-direction: column;
         padding-left: 2rem;
     }
-    
+    .one {
+        left: 5rem;
+    }
+    .two {
+        left :0;
+    }
+    .three {
+        left: 11rem;
+    }
+    #message {
+        width: initial;
+    }
+    .numText p {
+        width: initial;
+        height: initial;
+    }
+    .mockTestImage {
+        left: 11rem;
+    }
+    .BG {
+        left: 11rem;
+    }
+    .menu {
+        overflow: scroll;
+    }
 }
