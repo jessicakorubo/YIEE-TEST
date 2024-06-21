@@ -1130,6 +1130,14 @@ img#closePopup {
         padding: 4rem;
     }
     .journey h1 {
-        font-size: 45px;
+        font-size: 35px;
+    }
+    .groupedTestimonial {
+        display: flex;
+        flex-direction: column;
+    }
+    .quote {
+        width: fit-content;
+        height: 300px;
     }
 }
