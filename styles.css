@@ -185,6 +185,10 @@ nav#navbar {
 }
 .hamburger {
     display: none;
+    padding-right: 2rem;
+}
+.primary-nav {
+    margin-left: 2rem;
 }
 nav#navbar .primary-nav #logo {
     display: flex;
@@ -316,6 +320,8 @@ nav#navbar .tertiary-nav #sign-up {
 .map {
     margin: auto;
     width: 70%;
+    place-items: center;
+    gap: 6rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 2rem;
@@ -403,7 +409,9 @@ nav#navbar .tertiary-nav #sign-up {
     line-height: 26px;
     letter-spacing: 2px;
 }
-
+.design {
+    align-self: center;
+}
 .thumbsUp img {
     position: relative;
     height: 70px;
@@ -884,6 +892,7 @@ p#review {
 .footercontainer p#rights {
     margin-top: 2rem;
     opacity: 0.5;
+    text-align: center;
 }
 .socials img {
     margin-right: 0.5rem;
@@ -968,6 +977,14 @@ img#closePopup {
 }
 /* MOBILE DEVICES  */
 @media screen  and (max-width: 950px){
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger img {
+        width: 40px;
+        height: 40px;
+    }
     .map{
         width: 85%;
         display: flex;
@@ -998,8 +1015,9 @@ img#closePopup {
         display: none;
     }
     nav#navbar {
-        padding:  0 25px;
         margin-bottom: 0;
+        justify-content: center;
+        gap: 35%;
     }
     .container{
         padding: 0 0;
@@ -1013,7 +1031,8 @@ img#closePopup {
         padding: 2rem 0;
         position: absolute;
         top: 50px;
-        width:100%;
+        width:90%;
+        margin: auto;
         background-color: white;
         box-shadow: 2px 5px 40px rgba(21, 20, 57, 0.4);
         color: white;
@@ -1037,9 +1056,7 @@ img#closePopup {
         text-decoration: none;
         color: black;
     }
-    .hamburger {
-        display: block;
-    }
+    
     .secondary-nav {
         display: none;
     }
@@ -1140,4 +1157,13 @@ img#closePopup {
         width: fit-content;
         height: 300px;
     }
+    .getStarted {
+        flex-direction: column;
+        padding:  4rem 2rem;
+    }
+    .footer {
+        flex-direction: column;
+        padding-left: 2rem;
+    }
+    
 }
