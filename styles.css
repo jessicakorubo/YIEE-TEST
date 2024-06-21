@@ -12,7 +12,7 @@
     src: url(Fonts/DMSans-Regular.ttf);
 }
 * {
-    box-sizing: content-box;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -910,10 +910,11 @@ p#review {
     width: 30%;
     background-color: white;
     color: black;
-    height: 60vh;
+    height: 70vh;
     padding: 2rem;
     visibility: hidden;
     transition: 0.5s;
+    margin: auto;
     opacity: 0;
     box-shadow: 3px 4px 50px rgba(4, 3, 2, 1);
     text-align: center;
@@ -1030,7 +1031,9 @@ img#closePopup {
     }
     #signInPopup {
         width: 70%;
-        height: 70vh;
+        left: 38%;
+        top: 40%;
+        height: max-content;
     }
     .mobile_nav {
         /* visibility: hidden; */
@@ -1082,7 +1085,7 @@ img#closePopup {
         color: white;
     }
     .email {
-        width: fit-content;
+        width: 90%;
         margin-top: 1rem;
         box-shadow: 5px 3px 50px rgba(4, 3, 2, 1);
     }
