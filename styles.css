@@ -912,7 +912,8 @@ p#review {
     color: black;
     height: 70vh;
     padding: 2rem;
-    visibility: hidden;
+    /* visibility: hidden; */
+    display: none;
     transition: 0.5s;
     margin: auto;
     opacity: 0;
@@ -921,7 +922,8 @@ p#review {
     transform: translate(-50%, -50%);
 }
 #signInPopup.active {
-    visibility: visible;
+    /* visibility: visible; */
+    display: block;
     transition: 0.5s;
     opacity: 1;
 }
@@ -1155,6 +1157,7 @@ img#closePopup {
     }
     .journey {
         padding: 3rem;
+        width: 100%;
     }
     .journey h1 {
         font-size: 35px;
