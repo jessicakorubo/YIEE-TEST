@@ -1046,7 +1046,7 @@ img#closePopup {
     }
     #signInPopup {
         width: 70%;
-        left: 38%;
+        /* left: 38%; */
         top: 40%;
         height: max-content;
     }
